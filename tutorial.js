@@ -11,7 +11,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-  console.info(`Logged in as ${client.user.tag}!`);
+  // console.info(`Logged in as ${client.user.tag}!`);
   let now = new Date();
   client.channels.cache.get(generalChannelId).send(`The time is: ${now.toLocaleTimeString('en-US')}`);
   fs.writeFile("/Users/luosrestil/Desktop/working.txt", `${new Date().toLocaleTimeString()}: working`, {flag: "a"}, (err) => {
